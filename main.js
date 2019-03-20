@@ -52,32 +52,35 @@ price1: '$1.99',
 price2: '$1.49',
 price3: '$0.99',
 validUnit: '04/01/2016',
-}
+},
 
 
 
 
 ];
 
-console.log ('products', products);
-const printTDom = (divId,textToPrint) =>{
-const selectedDiv = document.getElementById(divId);
-selectedDiv.innerHTML =textToPrint;
+// console.log ('products', products);
 
+const printToDom = (divId, textToPrint) => {
+const selectedDiv = document.getElementById(divId);
+selectedDiv.innerHTML = textToPrint;
 };
-const domstringBuilder = () => {
+const domStringBuilder = () => {
     let domString = '';
+    
     products.forEach((product) => {
         domString += `<h3>${product.title}</h3>`
     });
-    printTDom('product-container',domString);
-}
+    printToDom('products-container',domString);
+};
 
 
 
 
-const init = () => {
-    domstringBuilder();
+const init =() => {
+    
+    domStringBuilder();
 
 };
+
 init ();
